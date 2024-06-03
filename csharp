@@ -1,0 +1,38 @@
+// Example code for a finance manager app in C#
+using System;
+
+class FinanceManager
+{
+    private double balance;
+
+    public FinanceManager()
+    {
+        balance = 0;
+    }
+
+    public void Deposit(double amount)
+    {
+        balance += amount;
+    }
+
+    public void Withdraw(double amount)
+    {
+        balance -= amount;
+    }
+
+    public double GetBalance()
+    {
+        return balance;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        FinanceManager manager = new FinanceManager();
+        manager.Deposit(1000);
+        manager.Withdraw(500);
+        Console.WriteLine("Current balance: " + manager.GetBalance());
+    }
+}
